@@ -88,7 +88,39 @@
         </li>
     </ul>
     <!--rutas-->
-
+    <div class="container-routes">
+        <div class="route">
+            <div id="routeColor"></div>
+            <div class="route-content">
+                <h5 id="name-route">sdfsdf</h5>
+                <p><i class="fa-solid fa-plane-departure"></i> Bogotá-Cartagena</p>
+                <p><i class="fa-solid fa-money-bills iconCard"></i> 50000</p>
+                <p><i class="fa-solid fa-star-half-stroke iconCard"></i> 5</p>
+            </div>
+        </div>
+        <div class="route">
+            <div id="routeColor"></div>
+            <h5 id="name-route">sdfsdf</h5>
+            <p><i class="fa-solid fa-plane-departure"></i>: Bogotá-Cartagena</p>
+            <p><i class="fa-solid fa-money-bills iconCard"></i>: 50000</p>
+            <p><i class="fa-solid fa-star-half-stroke iconCard"></i>: 5</p>
+        </div>
+        <div class="route">
+            <div id="routeColor"></div>
+            <h5 id="name-route">sdfsdf</h5>
+            <p><i class="fa-solid fa-plane-departure"></i>: Bogotá-Cartagena</p>
+            <p><i class="fa-solid fa-money-bills iconCard"></i>: 50000</p>
+            <p><i class="fa-solid fa-star-half-stroke iconCard"></i>: 5</p>
+        </div>
+        <div class="route">
+            <div id="routeColor"></div>
+            <h5 id="name-route">sdfsdf</h5>
+            <p><i class="fa-solid fa-plane-departure"></i>: Bogotá-Cartagena</p>
+            <p><i class="fa-solid fa-money-bills iconCard"></i>: 50000</p>
+            <p><i class="fa-solid fa-star-half-stroke iconCard"></i>: 5</p>
+        </div>
+    
+    </div>
 
     <!-- Modal de clientes-->
     <div class="modal fade" id="modalClients" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
@@ -138,7 +170,7 @@
                                 <input type="text" id="nacionalidad" name="nacionalidad" required>
                             </div>
 
-                            <button type="submit">Enviar</button>
+                            <button type="submit" >Enviar</button>
                         </form>
 
                     </div>
@@ -185,7 +217,7 @@
                                 <label for="email">Correo electrónico:</label>
                                 <input type="email" id="emailEdit" name="email" required>
                             </div>
-                            <button type="submit" id="btnGuardarCambios">Guardar cambios</button>
+                            <button type="submit" id="btnGuardarCambios" data-bs-dismiss="modal">Guardar cambios</button>
                         </form>
                     </div>
                 </div>
@@ -199,11 +231,33 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="modalRoutesLabel">Gestiòn de rutas aèreas</h5>
+                    <h5 class="modal-title" id="modalRoutesLabel">Gestión de rutas aéreas</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    ...
+                    <form action="">
+                        <div>
+                            <label for="nombres">Nombre:</label>
+                            <input type="text" id="nombresEdit" name="nombres" required>
+                        </div>
+                        <div>
+                            <label for="apellidos">Precio:</label>
+                            <input type="text" id="apellidosEdit" name="apellidos" placeholder="valor sin puntos ni comas" required>
+                        </div>
+                        <div>
+                            <label for="apellidos">Ciudad de origen:</label>
+                            <input type="text" id="apellidosEdit" name="apellidos" required>
+                        </div>
+                        <div>
+                            <label for="apellidos">Ciudad de destino:</label>
+                            <input type="text" id="apellidosEdit" name="apellidos" required>
+                        </div>
+                        <div>
+                            <label for="apellidos">Puntos:</label>
+                            <input type="number" id="apellidosEdit" name="apellidos" required>
+                        </div>
+                        <button type="submit" id="btnGuardarRutas">Guardar cambios</button>
+                    </form>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>

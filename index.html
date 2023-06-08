@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>airlineAdmi</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+    <header class="header">
+        <h1>Campus TravelExp Admi ✈ </h1>
+    </header>
+    <!--carousel decorativo-->
+    <div id="carouselDecorativeAirline" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselDecorativeAirline" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselDecorativeAirline" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselDecorativeAirline" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="images/pasaporte-boleto-mano-tela-casual-mujer-asiatica-joven-registrarse-vacaciones-viaje-quiosco-seguridad-aerolinea-personal-viaje-mujer-asiatica-mascara-terminal-aeropuerto-que-registra-vuelo_609648-356.avif"
+                    class="carousel-image" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="images/avion-femenino-avion-volador-uniforme-botones-comando-cabina-salpicadero-cabina-pulsando-motor-interruptor-radar-tablero-panel-control-volar-jet-navegacion-trafico_482257-49480.avif"
+                    class="carousel-image" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="images/tarjeta-embarque-avion-juguete-vista-superior-mesa_93675-128630.avif"
+                    class="carousel-image" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselDecorativeAirline"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselDecorativeAirline"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!--menù administrativo-->
+    <ul class="nav justify-content-center">
+        <li class="nav-item dropdown">
+            <i class="fa-solid fa-users"></i>
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                aria-expanded="false">Clientes</a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#modalClients"
+                        id="btnAgregar">Agregar</a>
+                </li>
+                <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#modalClients"
+                        id="btnListar">Ver clientes</a>
+                </li>
+            </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+            <i class="fa-solid fa-map"></i>
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                aria-expanded="false">Rutas</a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#modalRoutes">Agregar</a>
+                </li>
+                <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#modalRoutes">Eliminar</a>
+                </li>
+            </ul>
+        </li>
+        <li class="nav-item">
+            <i class="fa-solid fa-star"></i>
+            <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#modalPoints">Puntos</a>
+        </li>
+    </ul>
+    <!--rutas-->
+
+
+    <!-- Modal de clientes-->
+    <div class="modal fade" id="modalClients" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="modalClientsLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalClientsLabel">Gestión de clientes</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Divs ocultos para agregar, editar, listar, eliminar -->
+                    <div id="divAgregar" class="hidden">
+                        <form action="">
+                            <div>
+                                <label for="identificacion">Número de identificación:</label>
+                                <input type="text" id="identificacion" name="identificacion" required>
+                            </div>
+
+                            <div>
+                                <label for="nombres">Nombres:</label>
+                                <input type="text" id="nombres" name="nombres" required>
+                            </div>
+
+                            <div>
+                                <label for="apellidos">Apellidos:</label>
+                                <input type="text" id="apellidos" name="apellidos" required>
+                            </div>
+
+                            <div>
+                                <label for="telefono">Teléfono:</label>
+                                <input type="tel" id="telefono" name="telefono" required>
+                            </div>
+
+                            <div>
+                                <label for="email">Correo electrónico:</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+
+                            <div>
+                                <label for="fechaNacimiento">Fecha de nacimiento:</label>
+                                <input type="date" id="fechaNacimiento" name="fechaNacimiento" required>
+                            </div>
+
+                            <div>
+                                <label for="nacionalidad">Nacionalidad:</label>
+                                <input type="text" id="nacionalidad" name="nacionalidad" required>
+                            </div>
+
+                            <button type="submit">Enviar</button>
+                        </form>
+
+                    </div>
+                    <div id="divListar" class="hidden">
+                        <div>
+                            <input type="text" id="inputBusqueda"
+                                placeholder="Buscar por nombre, apellidos o documento de identidad">
+                            <button id="btnBuscar">Buscar</button>
+                        </div>
+                        <ul id="listaClientes">
+                            <!-- Lista de clientes -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <!-- Modal de clientes editar-->
+        <div class="modal fade" id="modalClientsEdit" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="modalClientsEditLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalClientsEditLabel">Editar cliente</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="divEditar">
+                        <form action="">
+                            <div>
+                                <label for="nombres">Nombres:</label>
+                                <input type="text" id="nombresEdit" name="nombres" required>
+                            </div>
+                            <div>
+                                <label for="apellidos">Apellidos:</label>
+                                <input type="text" id="apellidosEdit" name="apellidos" required>
+                            </div>
+                            <div>
+                                <label for="telefono">Teléfono:</label>
+                                <input type="tel" id="telefonoEdit" name="telefono" required>
+                            </div>
+                            <div>
+                                <label for="email">Correo electrónico:</label>
+                                <input type="email" id="emailEdit" name="email" required>
+                            </div>
+                            <button type="submit" id="btnGuardarCambios">Guardar cambios</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de rutas-->
+    <div class="modal fade" id="modalRoutes" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="modalRoutesLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalRoutesLabel">Gestiòn de rutas aèreas</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de puntos -->
+    <div class="modal fade" id="modalPoints" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="modalPointsLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalPointsLabel">Puntos de fidelizaciòn</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de compras-->
+    <div class="modal fade" id="modalTickets" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="modalTicketsLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTicketsLabel">Comprar ticket</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <i class="fa-regular fa-id-card"></i>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
